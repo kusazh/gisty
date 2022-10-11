@@ -10,6 +10,10 @@ article,
   font-family: 'Gill Sans MT', Gill Sans, Sans-serif !important;
 }
 
+article {
+  padding: 30px !important;
+}
+
 header {
   width: 200px;
   height: 200px;
@@ -37,13 +41,14 @@ footer {
   }
 
   .gist-data {
-    display: block !important;
+    height: auto !important;
   }
 }
 
-@media (hover: none), (pointer: coarse) {
+@media (hover: none),
+(pointer: coarse) {
   .gist-data {
-    display: block !important;
+    height: auto !important;
   }
 }
 
@@ -58,26 +63,38 @@ footer {
   border-radius: 0 !important;
 }
 
-.gist-file:first-child {
-  display: none;
-}
-
-.gist-file:hover .gist-data {
-  display: block;
-}
-
-.gist-meta {
-  color: rgba(0, 0, 0, 0) !important;
-}
-
+.gist-file:first-child,
 .gist-meta a:first-child,
 .gist-meta a:nth-child(3) {
   display: none;
 }
 
+.gist-file:active .gist-data,
+.gist-file:hover .gist-data {
+  height: auto;
+}
+
+.gist-meta {
+  cursor: default;
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0) !important;
+  border-radius: 0 !important;
+}
+
+.gist-meta a:nth-child(2) {
+  word-spacing: 6px;
+  color: transparent !important;
+  background-color: #666;
+  background: -webkit-linear-gradient(279deg, rgba(0, 0, 0, 0) 2.43em, #666 2.43em);
+  background: -moz-linear-gradient(279deg, rgba(0, 0, 0, 0) 2.43em, #666 2.43em);
+  background: -o-linear-gradient(279deg, rgba(0, 0, 0, 0) 2.43em, #666 2.43em);
+  background: linear-gradient(279deg, rgba(0, 0, 0, 0) 2.43em, #666 2.43em);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .gist-data {
-  display: none;
-  padding: 30px;
+  height: 0;
   word-wrap: break-word !important;
   border-bottom: 0 !important;
 }
