@@ -1,0 +1,83 @@
+body {
+  width: 580px;
+  margin: 90px auto;
+  padding: 0 20px 0 20px;
+}
+
+body,
+article,
+.gist-meta {
+  font-family: 'Gill Sans MT', Gill Sans, Sans-serif !important;
+}
+
+header {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 60px;
+  background: url(kusai.png);
+  background-size: 100% 100%;
+}
+
+header i {
+  color: #ddd;
+}
+
+a {
+  color: black;
+}
+
+footer {
+  margin-top: 60px;
+  color: gray;
+}
+
+@media screen and (max-width: 580px) {
+  body {
+    width: auto;
+  }
+
+  .gist-data {
+    display: block !important;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .gist-data {
+    display: block !important;
+  }
+}
+
+.gist,
+.gist-file {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.gist-file {
+  border: 1px solid #ddd !important;
+  border-radius: 0 !important;
+}
+
+.gist-file:first-child {
+  display: none;
+}
+
+.gist-file:hover .gist-data {
+  display: block;
+}
+
+.gist-meta {
+  color: rgba(0, 0, 0, 0) !important;
+}
+
+.gist-meta a:first-child,
+.gist-meta a:nth-child(3) {
+  display: none;
+}
+
+.gist-data {
+  display: none;
+  padding: 30px;
+  word-wrap: break-word !important;
+  border-bottom: 0 !important;
+}
