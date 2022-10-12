@@ -41,14 +41,14 @@ footer {
   }
 
   .gist-data {
-    height: auto !important;
+    max-height: 8964px !important;
   }
 }
 
 @media (hover: none),
 (pointer: coarse) {
   .gist-data {
-    height: auto !important;
+    max-height: 8964px !important;
   }
 }
 
@@ -71,7 +71,8 @@ footer {
 
 .gist-file:active .gist-data,
 .gist-file:hover .gist-data {
-  height: auto;
+  max-height: 8964px;
+  transition: max-height 0s;
 }
 
 .gist-meta {
@@ -94,7 +95,8 @@ footer {
 }
 
 .gist-data {
-  height: 0;
+  max-height: 0;
+  transition: max-height 1s 0.5s;
   word-wrap: break-word !important;
   border-bottom: 0 !important;
 }
