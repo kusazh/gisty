@@ -14,10 +14,17 @@ article {
   padding: 30px !important;
 }
 
+.sketch article {
+  padding: 120px !important;
+}
+
 header {
+  margin-bottom: 60px;
+}
+
+.text header {
   width: 200px;
   height: 200px;
-  margin-bottom: 60px;
   background: url(kusai.png);
   background-size: 100% 100%;
 }
@@ -53,9 +60,14 @@ footer {
 }
 
 .gist,
-.gist-file {
+.text .gist-file {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .gist-file {
@@ -69,9 +81,11 @@ footer {
   display: none;
 }
 
-.gist-file:active .gist-data,
-.gist-file:hover .gist-data {
+.text .gist-file:active .gist-data,
+.text .gist-file:hover .gist-data {
   max-height: 8964px;
+  -webkit-transition: max-height 0s;
+  -o-transition: max-height 0s;
   transition: max-height 0s;
 }
 
@@ -83,19 +97,34 @@ footer {
 }
 
 .gist-meta a:nth-child(2) {
-  word-spacing: 6px;
   color: transparent !important;
   background-color: #666;
-  background: -webkit-linear-gradient(279deg, rgba(0, 0, 0, 0) 2.43em, #666 2.43em);
-  background: -moz-linear-gradient(279deg, rgba(0, 0, 0, 0) 2.43em, #666 2.43em);
-  background: -o-linear-gradient(279deg, rgba(0, 0, 0, 0) 2.43em, #666 2.43em);
+}
+
+.text .gist-meta a:nth-child(2) {
+  word-spacing: 6px;
+  background: -o-linear-gradient(171deg, rgba(0, 0, 0, 0) 2.43em, #666 2.43em);
   background: linear-gradient(279deg, rgba(0, 0, 0, 0) 2.43em, #666 2.43em);
   -webkit-background-clip: text;
-  background-clip: text;
+          background-clip: text;
+}
+
+.sketch .gist-meta a:nth-child(2) {
+  background: -o-linear-gradient(171deg, rgba(0, 0, 0, 0) 1.93em, #666 1.93em);
+  background: linear-gradient(279deg, rgba(0, 0, 0, 0) 1.93em, #666 1.93em);
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .gist-data {
+  word-wrap: break-word !important;
+  border-bottom: 0 !important;
+}
+
+.text .gist-data {
   max-height: 0;
+  -webkit-transition: max-height 1s 0.5s;
+  -o-transition: max-height 1s 0.5s;
   transition: max-height 1s 0.5s;
   word-wrap: break-word !important;
   border-bottom: 0 !important;
