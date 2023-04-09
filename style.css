@@ -1,73 +1,26 @@
 body {
-  width: 580px;
-  margin: 90px auto;
-  padding: 0 20px 0 20px;
-}
-
-body,
-article,
-.gist-meta {
-  font-family: 'Gill Sans MT', Gill Sans, Sans-serif !important;
+  width: 36rem;
+  margin: 1rem auto;
+  padding: 0 1rem 0 1rem;
 }
 
 article {
-  padding: 30px !important;
+  padding: 2rem !important;
 }
 
-.sketch article {
-  padding: 120px !important;
-}
-
-header {
-  margin-bottom: 60px;
-}
-
-.text header {
-  width: 200px;
-  height: 200px;
-  background: url(kusai.png);
-  background-size: 100% 100%;
-}
-
-header i {
-  color: #ddd;
-}
-
-a {
-  color: black;
-}
-
-footer {
-  margin-top: 60px;
-  color: gray;
-}
-
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 38rem) {
   body {
     width: auto;
-  }
-
-  .gist-data {
-    max-height: 8964px !important;
-  }
-}
-
-@media (hover: none),
-(pointer: coarse) {
-  .gist-data {
-    max-height: 8964px !important;
   }
 }
 
 .gist,
-.text .gist-file {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.gist-file {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 .gist-file {
@@ -81,51 +34,22 @@ footer {
   display: none;
 }
 
-.text .gist-file:active .gist-data,
-.text .gist-file:hover .gist-data {
-  max-height: 8964px;
-  -webkit-transition: max-height 0s;
-  -o-transition: max-height 0s;
-  transition: max-height 0s;
-}
-
 .gist-meta {
-  cursor: default;
-  pointer-events: none;
-  color: rgba(0, 0, 0, 0) !important;
   border-radius: 0 !important;
+  color: rgba(0, 0, 0, 0) !important;
+  max-height: 1rem;
+  pointer-events: none;
+  cursor: default;
 }
 
 .gist-meta a:nth-child(2) {
   color: transparent !important;
   background-color: #666;
-}
-
-.text .gist-meta a:nth-child(2) {
-  word-spacing: 6px;
-  background: -o-linear-gradient(171deg, rgba(0, 0, 0, 0) 2.43em, #666 2.43em);
-  background: linear-gradient(279deg, rgba(0, 0, 0, 0) 2.43em, #666 2.43em);
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-
-.sketch .gist-meta a:nth-child(2) {
-  background: -o-linear-gradient(171deg, rgba(0, 0, 0, 0) 1.93em, #666 1.93em);
-  background: linear-gradient(279deg, rgba(0, 0, 0, 0) 1.93em, #666 1.93em);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 2rem, #666 2rem);
+  background-clip: text;
 }
 
 .gist-data {
-  word-wrap: break-word !important;
-  border-bottom: 0 !important;
-}
-
-.text .gist-data {
-  max-height: 0;
-  -webkit-transition: max-height 1s 0.5s;
-  -o-transition: max-height 1s 0.5s;
-  transition: max-height 1s 0.5s;
   word-wrap: break-word !important;
   border-bottom: 0 !important;
 }

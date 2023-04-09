@@ -1,2 +1,6 @@
-# kusai-text
-CSS decorated [kusai text](https://gist.github.com/kusazh/128df4e6b65f1ec859b235e43de79a52)
+# gisty
+CSS decorated GitHub gist
+
+[Example 1](https://kus.ai/text/)
+
+[Example 2](https://kus.ai/sketchbook/)
