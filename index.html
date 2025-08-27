@@ -1,12 +1,128 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Example Page</title>
-    <meta name="viewport" content="width=device-width" />
-    <meta charset="UTF-8" />
-  </head>
-  <body>
-    <script src="https://gist.github.com/kusazh/128df4e6b65f1ec859b235e43de79a52.js"></script>
-  </body>
+
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta charset="UTF-8" />
+  <title>Example Page</title>
+  <style type="text/css">
+    body {
+      width: 36rem;
+      margin: 1rem auto;
+      padding: 0 1rem;
+    }
+
+    article {
+      line-height: 1.75 !important;
+      padding: 2.5rem !important;
+    }
+
+    article>*:first-child * {
+      margin-top: 0 !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    .footnotes {
+      font-size: 1rem !important;
+      border: none !important;
+      padding: 0 !important;
+      margin: 1.5rem 0 !important;
+      hanging-punctuation: allow-end;
+    }
+
+    a {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: .2rem;
+    }
+
+    ol,
+    ul {
+      padding-left: 2rem !important;
+    }
+
+    hr {
+      height: 1px !important;
+    }
+
+    sub,
+    sup {
+      font-size: x-small !important;
+    }
+
+    blockquote {
+      border-left: 1px solid #ddd !important;
+      margin: 1rem !important;
+      padding-left: calc(1rem - 1px) !important;
+    }
+
+    .footnotes {
+      border-top: 1px solid #ddd !important;
+    }
+
+    .footnotes li:target::before {
+      top: -0.5rem !important;
+      right: -0.5rem !important;
+      bottom: -0.5rem !important;
+      left: -2.5rem !important;
+    }
+
+    .gist,
+    .gist-file {
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+    }
+
+    .gist-file {
+      border: 1px solid #ddd !important;
+    }
+
+    .gist-file:first-child,
+    .gist-meta a:first-child,
+    .gist-meta a:nth-child(3),
+    #footnote-label {
+      display: none;
+    }
+
+    .gist-meta {
+      border-radius: 0 !important;
+      color: rgba(0, 0, 0, 0) !important;
+      max-height: 1rem;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .gist-meta a:nth-child(2) {
+      font-family: monospace;
+      color: transparent !important;
+      background-color: #666;
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 1.8rem, #666 1.8rem);
+      background-clip: text;
+    }
+
+    .gist-data {
+      word-wrap: break-word !important;
+      border-bottom: 0 !important;
+    }
+
+    @media screen and (max-width: 38rem) {
+      body {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://gist.github.com/kusazh/128df4e6b65f1ec859b235e43de79a52.js"></script>
+</body>
+
 </html>
